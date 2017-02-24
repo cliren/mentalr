@@ -22,9 +22,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 
   return gulp.src([
-      'bower_components/angular/angular.js',
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/bootstrap/js/modal.js',
+      'node_modules/angular/angular.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/bootstrap/js/modal.js',
       'src/mentalr/**/*.js'
     ])
     .pipe($.concat('mentalr.js'))
