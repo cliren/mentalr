@@ -1,4 +1,4 @@
-angular.module('mentalr', [])
+angular.module('mentalr', ["dndLists"])
   .controller('MentalrController', ['$scope',
     function($scope) {
 
@@ -127,9 +127,9 @@ angular.module('mentalr', [])
           $('#codeModal').modal('hide');
         }
       };
-
+      
       $scope.personas = [
-        { 
+        {
           label: 'Developers',
           verticals: [
             {
@@ -142,7 +142,7 @@ angular.module('mentalr', [])
                 }
               ],
               features: [
-                { 
+                {
                   label: 'Alarm Clock',
                   description: 'Create an alarm clock feature that will wake the developer up at a specified time.',
                   color: 'black'
@@ -159,7 +159,7 @@ angular.module('mentalr', [])
                 }
               ],
               features: [
-                { 
+                {
                   label: 'Soap',
                   description: 'Create soap to enable the shower feature.',
                   color: 'black'
@@ -181,7 +181,7 @@ angular.module('mentalr', [])
                 }
               ],
               features: [
-                { 
+                {
                   label: 'Coffee',
                   description: 'Source coffee to use with the French press feature.',
                   color: 'black'
@@ -195,7 +195,7 @@ angular.module('mentalr', [])
             }
           ]
         },
-        { 
+        {
           label: 'Managers',
           verticals: [
             {

@@ -25,6 +25,7 @@ gulp.task('scripts', function() {
       'node_modules/angular/angular.js',
       'node_modules/jquery/dist/jquery.js',
       'node_modules/bootstrap/js/modal.js',
+      'node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js',
       'src/mentalr/**/*.js'
     ])
     .pipe($.concat('mentalr.js'))

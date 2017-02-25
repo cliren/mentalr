@@ -1,5 +1,4 @@
 //Font Awesome
-
 //@import "../../node_modules/font-awesome/less/font-awesome.less";
 
 // Core variables and mixins
@@ -24,208 +23,212 @@
 @import "../../node_modules/bootstrap/less/print.less";
 @import "../../node_modules/bootstrap/less/responsive-utilities.less";
 
-
 html, body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .row {
-    width: 100%;
-    height: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .rule {
-    height: 1px;
-    width: 100%;
-    background-color: #999;
-    border-top: solid 1px #ccc;
-    top: 30%;
-    left: 0;
-    position: absolute;
-    z-index: 2;
+  height: 1px;
+  width: 100%;
+  background-color: #999;
+  border-top: solid 1px #ccc;
+  top: 30%;
+  left: 0;
+  position: absolute;
+  z-index: 2;
 }
 
 .persona {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 240px;
-    height: 100%;
-    margin-left: 10px;
-    margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  min-width: 240px;
+  height: 100%;
+  margin-left: 10px;
+  margin-bottom: 0;
 
-    &:last-child {
-        border-right: none;
-    }
+  &:last-child {
+    border-right: none;
+  }
 }
 
 .actions {
-    height: 30%;
-    position: relative;
+  height: 30%;
+  position: relative;
 
-    h3 {
-        text-align: center;
-        font-family: 'Open Sans';
-        position: absolute;
-        text-shadow: 0 1px 0 #fff;
-        color: #ccc;
-        font-size: 30px;
-        margin-top: 0;
-        font-weight: 300;
-        width: 100%;
-    }
+  h3 {
+    text-align: center;
+    font-family: 'Open Sans';
+    position: absolute;
+    text-shadow: 0 1px 0 #fff;
+    color: #ccc;
+    font-size: 24px;
+    margin-top: 0;
+    font-weight: 300;
+    width: 100%;
+  }
 
-    & > .vertical > .card {
-        position: absolute;
-        bottom: 7px;
-    }
+  & > .vertical > .card {
+    position: absolute;
+    bottom: 7px;
+  }
 }
 
 .features {
-    height: 70%;
+  height: 70%;
 }
 
 .vertical {
-    width: 240px;
-    height: 99%;
-    float: left;
-    text-align: center;
+  width: 240px;
+  height: 99%;
+  float: left;
+  text-align: center;
 }
 
 .card {
-    vertical-align: bottom;
-    border: solid 1px #eee;
-    .box-shadow(0 1px 3px rgba(0,0,0,.05));
-    width: 236px;
-    height: 150px;
-    min-height: 150px;
-    padding: 15px 30px;
-    margin-bottom: 10px;
+  vertical-align: bottom;
+  border: solid 1px #eee;
+  .box-shadow(0 1px 3px rgba(0, 0, 0, .05));
+  width: 236px;
+  height: 150px;
+  min-height: 150px;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+
+  h4 {
+    text-align: center;
+    font-family: 'Open Sans', serif;
+    font-size: 20px;
+    white-space: normal;
+    font-weight: normal;
+
+    button {
+      //margin-top: 10px;
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  &.white, &.white button {
+    background-color: #fff;
 
     h4 {
-        text-align: center;
-        font-family: 'Open Sans';
-        font-size: 24px;
-        white-space: normal;
-        font-weight: normal;
+      color: #333;
+    }
+  }
 
-        button {
-            margin-top: 10px;
-        }
+  &.black, &.black button {
+    background-color: #333;
+
+    h4, button {
+      color: #fff;
     }
 
-    &.white, &.white button {
-        background-color: #fff;
+    button {
+      border-color: #555;
+    }
+  }
 
-        h4 {
-            color: #333;
-        }
+  &.red, &.red button {
+    background-color: #fcd4d1;
+
+    h4, button {
+      color: #94070a;
     }
 
-    &.black, &.black button {
-        background-color: #333;
+    button {
+      border-color: #94070a;
+    }
+  }
 
-        h4, button {
-            color: #fff;
-        }
+  &.orange, &.orange button {
+    background-color: #fedcc6;
 
-        button {
-            border-color: #555;
-        }
+    h4, button {
+      color: #985006;
     }
 
-    &.red, &.red button {
-        background-color: #fcd4d1;
+    button {
+      border-color: #985006;
+    }
+  }
 
-        h4, button { 
-            color: #94070a; 
-        }
+  &.yellow, &.yellow button {
+    background-color: #fffbcc;
 
-        button {
-            border-color: #94070a; 
-        }
+    h4, button {
+      color: #a09600;
     }
 
-    &.orange, &.orange button {
-        background-color: #fedcc6;
+    button {
+      border-color: #a09600;
+    }
+  }
 
-        h4, button {
-            color: #985006;
-        }
+  &.green, &.green button {
+    background-color: #e0efd4;
 
-        button {
-            border-color: #985006;
-        }
+    h4, button {
+      color: #407927;
     }
 
-    &.yellow, &.yellow button {
-        background-color: #fffbcc;
+    button {
+      border-color: #407927;
+    }
+  }
 
-        h4, button {
-            color: #a09600;
-        }
+  &.blue, &.blue button {
+    background-color: #adc5e7;
 
-        button {
-            border-color: #a09600;
-        }
+    h4, button {
+      color: #003d73;
     }
 
-    &.green, &.green button {
-        background-color: #e0efd4;
+    button {
+      border-color: #003d73;
+    }
+  }
 
-        h4, button {
-            color: #407927;
-        }
+  &.purple, &.purple button {
+    background-color: #dfcce4;
 
-        button {
-            border-color: #407927;
-        }
+    h4, button {
+      color: #390a5d;
     }
 
-    &.blue, &.blue button {
-        background-color: #adc5e7;
-
-        h4, button {
-            color: #003d73;
-        }
-
-        button {
-            border-color: #003d73;
-        }
+    button {
+      border-color: #390a5d;
     }
-
-    &.purple, &.purple button {
-        background-color: #dfcce4;
-
-        h4, button {
-            color: #390a5d;
-        }
-
-        button {
-            border-color: #390a5d;
-        }
-    }
+  }
 }
 
 .controls {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
 .persona-controls {
-    display: block;
+  display: block;
 }
 
 textarea.form-control {
-    height: 200px;
+  height: 200px;
 
-    &.code {
-        height:300px;
-        font-family:'Courier New';
-    }
+  &.code {
+    height: 300px;
+    font-family: 'Courier New', serif;
+  }
 }
