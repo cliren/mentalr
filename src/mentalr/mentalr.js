@@ -1,6 +1,6 @@
-angular.module('mentalr', ["dndLists"])
-  .controller('MentalrController', ['$scope',
-    function($scope) {
+angular.module('mentalr', ["dndLists", "bootstrapLightbox"])
+  .controller('MentalrController', ['$scope', 'Lightbox',
+    function($scope, Lightbox) {
 
       var modalOptions = {
         keyboard: false,
@@ -126,6 +126,21 @@ angular.module('mentalr', ["dndLists"])
           $scope.personas = JSON.parse($scope.jsonSource);
           $('#codeModal').modal('hide');
         }
+      };
+  
+      $scope.images = [
+        {
+          'url': 'http://i.imgur.com/9RyWebb.jpg',
+          'thumbUrl': 'http://i.imgur.com/9RyWebbb.jpg'
+        }
+      ];
+  
+      $scope.openLightboxModal = function (imageUrl) {
+        var images = [{
+          url: imageUrl,
+          thumbUrl: imageUrl
+        }];
+        Lightbox.openModal(images, 0);
       };
       
       $scope.personas = [

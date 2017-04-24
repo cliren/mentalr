@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "angular": "1.6.2",
+    "angular-bootstrap-lightbox": "0.12.0",
     "angular-drag-and-drop-lists": "2.1.0",
     "bootstrap": "3.3.7",
     "font-awesome": "4.7.0",

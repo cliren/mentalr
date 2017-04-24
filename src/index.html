@@ -36,12 +36,12 @@
                      dnd-effect-allowed="copyMove" class="card need {{ n.color }}"
                      ng-repeat="n in v.needs" style="height: {{ (n.weight - 10) }}%;">
                     <h4>
-                        {{ n.label }}
+                        {{ n.label }} <a ng-if="n.mediaUrl" ng-click="openLightboxModal(n.mediaUrl)"
+                                         href=""><i class="fa fa-camera"></i></a>
                         <button ng-click="editNeed(n, v, p)"
                                 class="btn hidden-print btn-xs btn-default"><i
                                 class="fa fa-pencil-square-o"></i> Edit
                         </button>
-
                         <p class="description">{{n.description}}</p>
                     </h4>
                 </div>
@@ -54,7 +54,8 @@
                      dnd-effect-allowed="copyMove" class="card feature {{ f.color }}"
                      ng-repeat="f in v.features">
                     <h4>
-                        {{ f.label }}
+                        {{ f.label }} <a ng-if="f.mediaUrl" ng-click="openLightboxModal(f.mediaUrl)"
+                                         href=""><i class="fa fa-camera" ng-class="f.color == 'black' ? 'fa-inverse' : '' "></i></a>
                         <button ng-click="editFeature(f, v)"
                                 class="btn hidden-print btn-xs btn-default"><i
                                 class="fa fa-pencil-square-o"></i> Edit
@@ -136,17 +137,29 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="cardColor">Color</label>
-                        <select id="cardColor" class="form-control" ng-model="editorCard.color">
-                            <option value="white">White</option>
-                            <option value="black">Black</option>
-                            <option value="red">Red</option>
-                            <option value="orange">Orange</option>
-                            <option value="yellow">Yellow</option>
-                            <option value="green">Green</option>
-                            <option value="blue">Blue</option>
-                            <option value="purple">Purple</option>
-                        </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cardColor">Color</label>
+                                <select id="cardColor" class="form-control"
+                                        ng-model="editorCard.color">
+                                    <option value="white">White</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="purple">Purple</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cardMediaUrl">Media Url</label>
+                                <input type="text" id="cardMediaUrl" class="form-control"
+                                       ng-model="editorCard.mediaUrl"/>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="form-group">
                         <label for="cardDescription">Description</label>
@@ -194,7 +207,7 @@
     </div>
 
 </div>
-    <script src="./mentalr.js"></script>
+<script src="./mentalr.js"></script>
 </body>
 
 </html>

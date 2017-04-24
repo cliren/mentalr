@@ -20,14 +20,16 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-
+  
   return gulp.src([
-      'node_modules/angular/angular.js',
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/bootstrap/js/modal.js',
-      'node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js',
-      'src/mentalr/**/*.js'
-    ])
+    'node_modules/angular/angular.js',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/bootstrap/js/modal.js',
+    'node_modules/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js',
+    'src/vendor/ui-bootstrap-1.3.2.js',
+    'node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js',
+    'src/mentalr/**/*.js'
+  ])
     .pipe($.concat('mentalr.js'))
     .pipe($.uglify())
     .pipe(gulp.dest('.tmp'))
@@ -35,7 +37,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', ['serve'], function() {
-  $.watch(['src/**/*.js', 'src/**/*.less', 'src/**/*.html'], {
+  $.watch(['src/**/*.js', 'src/**/*.less', 'src/*.html'], {
     debounceDelay: 2000
   }, function(files) {
     gulp.start('build');
